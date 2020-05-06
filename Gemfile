@@ -11,6 +11,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'dotenv-rails' # 開発環境で環境変数を操作するのに必要
+gem 'unicorn' # アプリケーションサーバのunicorn
+gem 'mini_racer', platforms: :ruby # デプロイ時に必要
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -21,6 +24,11 @@ group :development, :test do
   gem 'faker'
   gem 'launchy'
   gem 'database_cleaner'
+  gem 'capistrano', '3.6.0' # capistranoのツール一式
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano3-unicorn'
 end
 
 group :development do
@@ -43,9 +51,13 @@ gem 'html2slim'
 gem 'bootstrap'
 gem 'rails_12factor', group: :production
 gem 'kaminari'
-gem 'bcrypt', '3.1.11'
 gem 'faker'
 gem 'seed_dump'
+
+gem 'bcrypt', '~> 3.1.7'
+
+gem 'ed25519'
+gem 'bcrypt_pbkdf'
 
 
 #gem 'rails_autolink'
