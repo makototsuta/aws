@@ -58,6 +58,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'ed25519'
 gem 'bcrypt_pbkdf'
+gem 'rename'
 
 
 #gem 'rails_autolink'
